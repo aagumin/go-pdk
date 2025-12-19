@@ -143,7 +143,7 @@ func add() int32 {
 	}
 	sum := Sum{Sum: params.A + params.B}
 	// use json output helper, which automatically marshals your struct to the plugin output
-	_, err := pdk.OutputJSON(sum)
+	err := pdk.OutputJSON(sum)
 	if err != nil {
 		pdk.SetError(err)
 		return 1
